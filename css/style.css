@@ -293,11 +293,11 @@ figure {
 }
 
 .bg-banner {
-  background: url('/images/bg1-min.jpg');
+  background: url('https://raw.githubusercontent.com/mrerren/walimah-gitaandwili/master/images/bg1-min.jpg');
 }
 
 .bg-started {
-  background: url('/images/bg-decorations/vines.png');
+  background: url('https://raw.githubusercontent.com/mrerren/walimah-gitaandwili/master/images/bg-decorations/vines.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -2035,7 +2035,7 @@ form label {
 }
 
 .bg-event {
-  background: url('/images/bg-decorations/bg-event.jpg');
+  background: url('https://raw.githubusercontent.com/mrerren/walimah-gitaandwili/master/images/bg-decorations/bg-event.jpg');
 }
 
 @media screen and (min-width: 760px) and (max-width: 768px) {
