@@ -255,9 +255,21 @@ $('#rsvp-submit').click(function () {
     return false;
   }
 
+  else {
+    $('#rsvp-submit').hide();
+    $('.form-loader').show();
+
+    setTimeout(function() {
+      $('.form-loader').hide();
+      $('.rsvp-box-hide').slideUp();
+      $('.rsvp-message').html('<i style="color:#5C5C60;">Thank you for filling in. We look forward to welcoming you!</i>').fadeIn();
+    }, 8000);
+  }
+
   function success() {
+    $('.form-loader').hide();
     $('.rsvp-box-hide').slideUp();
-    $('.rsvp-message').html('<i style="color:black;">Thank you for filling in. We look forward to welcoming you!</i>').fadeIn();
+    $('.rsvp-message').html('<i style="color:#5C5C60;">Thank you for filling in. We look forward to welcoming you!</i>').fadeIn();
   }
 
   function fail() {
@@ -265,8 +277,8 @@ $('#rsvp-submit').click(function () {
     $('.rsvp-message').html('<i style="color:red;"><div>Something went wrong, plesae try again!.</div></i>').fadeIn();
   }
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzRFsvpbGDQ3tlI6UaWmOP4TRLJvwhRSo7hTSwa_GNrsiUMWmk/exec'
-  const form = document.forms['submit-to-google-sheet']
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwrouSzDdifaHakI8jbEzcL008anOv4Eu6bFcievVjFVljhBsSW/exec';
+  const form = document.forms['submit-to-google-sheet'];
 
   form.addEventListener('submit', e => {
     e.preventDefault()
